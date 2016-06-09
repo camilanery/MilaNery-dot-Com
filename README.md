@@ -1,2 +1,0 @@
-# milanerydotcom
-My personal website.
