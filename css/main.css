@@ -39,8 +39,11 @@ a:hover {
 }
 
 h1 {
-    font-size: 3em;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    font-size: 20px;
+    font-family:'Helvetica', 'Sans-Serif';
+    line-height: 1.4em;
+    font-weight:400;
+
 
 }
 
@@ -55,4 +58,26 @@ footer {
     width: 70%;
     position:absolute;
     bottom:0;
+}
+
+
+
+select{
+  background:transparent;
+   width: auto;
+   height: 40px;
+   padding: 16px;
+   margin-top: 30px;
+   font-family: Helvetica, sans-serif;
+   font-size:20px;
+   font-weight:600;
+   line-height: 1;
+   border: solid 2px;
+   border-radius: 2;
+  /*-webkit-appearance: none;*/
+
+  }
+
+select > option {
+  background: pink;
 }
