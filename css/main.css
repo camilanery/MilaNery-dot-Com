@@ -1,5 +1,9 @@
 @import "compass/css3";
 
+body{
+  visibility: visible;
+}
+
 .content {
     position: relative;
     margin: 60px auto;
@@ -81,7 +85,7 @@ a {
     text-decoration: none;
     color: black;
     font-family: 'Roboto', sans-serif;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: lighter;
 }
 
@@ -92,12 +96,15 @@ a:hover {
     cursor: crosshair;
 }
 
-/*.overlay {
-  z-index: 9999;
+.overlay {
   height: 100%;
   width: 100%;
-  position: absolute;
+  position: fixed; /* Stay in place */
+  z-index: 999999; /* Sit on top */
+  left: 0;
   top: 0;
-  left:0;
-  background: red;
-}*/
+  background-color: red;
+  background-color: rgba(190,190,255, 0.5); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  visibility: visible;
+}
