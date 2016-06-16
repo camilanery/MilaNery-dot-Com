@@ -12,13 +12,15 @@ body{
 }
 
 img{
+  width: 1500px;
+  height: 1260px;
   position: fixed;
   z-index: -5;
   top: 50%;
   left: 50%;
-  transform: translate(-460px, -340px);
+  transform: translate(-750px, -630px);
   z-index: -20;
-  -webkit-filter: opacity(60%); /* Chrome, Safari, Opera */
+  -webkit-filter: opacity(50%); /* Chrome, Safari, Opera */
   filter: opacity(60%);
 }
 
