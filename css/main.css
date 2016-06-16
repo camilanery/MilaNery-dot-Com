@@ -100,11 +100,34 @@ a:hover {
   height: 100%;
   width: 100%;
   position: fixed; /* Stay in place */
-  z-index: 999999; /* Sit on top */
+  z-index: 100; /* Sit on top */
   left: 0;
   top: 0;
   background-color: red;
-  background-color: rgba(190,190,255, 0.5); /* Black w/opacity */
+  background-color: rgba(190,190,255, 0.7); /* Black w/opacity */
   overflow-x: hidden; /* Disable horizontal scroll */
   visibility: visible;
+}
+
+.note {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-310px,-300px);
+  z-index: 120;
+}
+
+h3{
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size:80px;
+
+}
+
+h4{
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size:40px;
+  position: relative;
+  margin-top: -80px;
 }
