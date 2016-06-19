@@ -1,14 +1,26 @@
 @import "compass/css3";
 
 body{
-  visibility: visible;
+  /*visibility: visible;*/
+}
+
+.name{
+  margin: 40px;
+  position: absolute;
+  color: #999;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  font-size: 65px;
+  color: rgb(151, 163, 230);
+  z-index: 10000;
 }
 
 .content {
-    position: relative;
-    margin: 60px auto;
-    margin-top: 100px;
-    width: 50%;
+  position: absolute;
+  /*margin: 60px auto;*/
+  width: 50%;
+  transform: translate(50%, 50%);
+  margin-top: 150px;
 }
 
 img{
@@ -27,14 +39,35 @@ img{
 
 
 h2 {
-    color: #999;
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    line-height: 1.4em;
-    font-size: 25px;
-    list-style: none;
-    text-decoration: none;
+  color: #999;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 200;
+  /*line-height: 1.4em;*/
+  font-size: 25px;
+  list-style: none;
+  text-decoration: none;
+  padding: 20px 0px 20px 0px;
+}
 
+/*h2:hover {
+  color: lightpink;
+  cursor: crosshair;
+}*/
+
+h5{
+  color: #999;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 200;
+  /*line-height: 1.4em;*/
+  font-size: 29px;
+  list-style: none;
+  text-decoration: none;
+  padding: 20px 0px 20px 0px;
+}
+
+h5:hover {
+  color: rgb(151, 163, 230);
+  cursor: crosshair;
 }
 
 p {
@@ -45,57 +78,50 @@ p {
 }
 
 
-
-
-.divider {
-    margin: 80px 0px 80px 0;
-    border-top: 1px solid black;
-    width: 100%;
-}
-
 .projects{
-      display: inline-block;
-      max-width: 140px;
-      max-height: 75px;
-      margin: 10px 10px 10px 0px;
-      border: 3px solid black;
-      background-color: rgba(0, 0, 0, 0.5);
-      color: white;
-      padding: 37.5px 70px 37.5px 70px;
+  position: relative;
+  z-index: 1000;
+  display: inline-block;
+  max-width: 140px;
+  max-height: 75px;
+  margin: 10px 10px 10px 0px;
+  border: 3px solid black;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 37.5px 70px 37.5px 70px;
 }
 
 
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    margin-top: -19px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  margin-top: -19px;
 
 }
 
 li {
-    float: left;
+  float: left;
 }
 
 li a {
-    display: block;
-    padding: 10px 20px 10px 2px;
+  display: block;
+  padding: 10px 20px 10px 2px;
 }
 
 a {
-    text-decoration: none;
-    color: black;
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
-    font-weight: lighter;
+  text-decoration: none;
+  color: black;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: lighter;
 }
 
 a:hover {
-    text-decoration: none;
-    /*list-style: none;*/
-    color: lightpink;
-    cursor: crosshair;
+  text-decoration: none;
+  color: rgb(151, 163, 230);
+  cursor: crosshair;
 }
 
 .overlay {
@@ -132,4 +158,48 @@ h4{
   font-size:40px;
   position: relative;
   margin-top: -80px;
+}
+
+
+#box {
+  width: auto;
+  height: 100px;
+  border: solid black;
+  border-width: 0px 0px 1.5px 0px;
+  transition: height 1s;
+  overflow-y: hidden;
+
+}
+
+#box.clicked {
+  height: 300px;
+  overflow-y: scroll;
+}
+
+#box2 {
+  width: auto;
+  height: 100px;
+  border: solid black;
+  border-width: 0px 0px 1.5px 0px;
+  transition: height 1s;
+  overflow-y: hidden;
+}
+
+#box2.clicked {
+  height: 300px;
+  overflow-y: scroll;
+}
+
+#box3 {
+  width: auto;
+  height: 100px;
+  border: solid black;
+  border-width: 0px 0px 1.5px 0px;
+  transition: height 1s;
+  overflow-y: hidden;
+}
+
+#box3.clicked {
+  height: 300px;
+  overflow-y: scroll;
 }

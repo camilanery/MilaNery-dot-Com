@@ -4,42 +4,54 @@
 		<title>Hire Me</title>
 		<link rel="stylesheet" type="text/css" href="./css/main.css">
 		<link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	</head>
 
 	<body>
+
+		<div class="name">
+			MILA NERY
+		</div>
+
 
 		<div class="content">
 		<img src="./images/YarisLoading7.gif" alt="Loading...">
 
 
+		 		<div id="box">
+					<div class="about">
+						<h2> about </h2> <h5 class="SeeMore2" style="float:right; padding:none; margin-top:-95px;"> + </h5>
+							<p>Mila Nery is a Brazilian graphic designer based in Baltimore. She got her BFA at the Maryland Institute College of Art. Her website is currently under construction!</p>
+					</div>
+				</div>
+
+				<div id="box2">
+					<div class="container">
+						<h2> work </h2> <h5 class="SeeMore2" style="float:right; padding:none; margin-top:-95px;"> + </h5>
+
+							<a href="/project1.html"><div class="projects">1</div></a>
+							<a href="/project2.html"><div class="projects">2</div></a>
+							<a href="/project3.html"><div class="projects">3</div></a>
+							<a href="/project4.html"><div class="projects">4</div></a>
+					</div>
+				</div>
 
 
-		<div class="About">
-			<h2> About </h2>
-				<p>Mila Nery is a Brazilian graphic designer based in Baltimore. She got her BFA at the Maryland Institute College of Art. Her website is currently under construction!</p>
-			<div class="divider"> </div>
-		</div>
-
-		<div class="container">
-			<h2> Projects </h2>
-				<a href="#"><div class="projects">1</div></a>
-				<a href="#"><div class="projects">2</div></a>
-				<a href="#"><div class="projects">3</div></a>
-				<a href="#"><div class="projects">4</div></a>
-		</div>
-
-		<div class="divider"> </div>
 
 
-		<div class="Contact">
-			<h2> Contact </h2>
-			<ul>
-					<li> <a href="mailto:cnery@mica.edu">Email Me</a> </li>
-					<li> <a href="http://twitter.com/home/?status= Hello @Yaris_Fun_Club !!! ">Tweet Me</a> </li>
-					<li> <a href="tel:2158202709">Facetime Me</a> </li>
-			</ul>
-		</div>
-	</div>
+					<div id="box3">
+						<div class="Contact">
+							<h2> contact </h2> <h5 class="SeeMore2" style="float:right; padding:none; margin-top:-95px;"> + </h5>
+							<ul>
+									<li> <a href="mailto:cnery@mica.edu">Email Me</a> </li>
+									<li> <a href="http://twitter.com/home/?status= Hello @Yaris_Fun_Club !!! ">Tweet Me</a> </li>
+									<li> <a href="tel:2158202709">Facetime Me</a> </li>
+							</ul>
+						</div>
+					</div>
+
+			</div>
 
 		<div class="overlay">
 		</div>
@@ -52,3 +64,27 @@
 	</body>
 
 </html>
+
+<script>
+$('#box').on('click', function() {
+$(this).toggleClass('clicked');
+});
+
+$('#box2').on('click', function() {
+$(this).toggleClass('clicked');
+});
+
+$('#box3').on('click', function() {
+$(this).toggleClass('clicked');
+});
+
+$('.SeeMore2').click(function(){
+	var $this = $(this);
+	$this.toggleClass('SeeMore2');
+	if($this.hasClass('SeeMore2')){
+		$this.text('+');
+	} else {
+		$this.text('-');
+	}
+});
+</script>
