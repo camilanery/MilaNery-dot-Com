@@ -3,10 +3,18 @@
 body{
   /*visibility: visible;*/
 }
+.wrapper{
+  /*position: relative;*/
+  max-width: 70% ;
+  max-height: 70% ;
+  transform: translate(30%, 30%);
+}
 
 .name{
-  margin: 40px;
-  position: absolute;
+  margin-left: -200px;
+  margin-top: -120px;
+  /*margin: 40px;*/
+  position: fixed;
   color: #999;
   font-family: 'Roboto', sans-serif;
   font-weight: 600;
@@ -17,10 +25,12 @@ body{
 
 .content {
   position: absolute;
-  /*margin: 60px auto;*/
+  margin: 280px 0px 0px 0px ;
   width: 50%;
-  transform: translate(50%, 50%);
-  margin-top: 150px;
+  height: 50%;
+  transform: translate(30%, 30%);
+
+
 }
 
 img{
@@ -30,7 +40,7 @@ img{
   z-index: -5;
   top: 50%;
   left: 50%;
-  transform: translate(-750px, -630px);
+  transform: translate(-50%, -35%);
   z-index: -20;
   -webkit-filter: opacity(50%); /* Chrome, Safari, Opera */
   filter: opacity(60%);
@@ -43,10 +53,10 @@ h2 {
   font-family: 'Roboto', sans-serif;
   font-weight: 200;
   /*line-height: 1.4em;*/
-  font-size: 25px;
+  font-size: 23px;
   list-style: none;
   text-decoration: none;
-  padding: 20px 0px 20px 0px;
+  padding: 20px 0px 12px 0px;
 }
 
 /*h2:hover {
@@ -70,10 +80,18 @@ h5:hover {
   cursor: crosshair;
 }
 
+h6{
+  color: #999;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 200;
+  text-align: center;
+  /*padding-bottom: 20px;*/
+}
+
 p {
   margin-top: -10px;
   font-family: 'Roboto', sans-serif;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: lighter;
 }
 
@@ -141,8 +159,10 @@ a:hover {
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-310px,-300px);
+  transform: translate(-385px,-185px);
   z-index: 120;
+  text-align: center;
+  margin-top: -40px;
 }
 
 h3{
@@ -163,7 +183,7 @@ h4{
 
 #box {
   width: auto;
-  height: 100px;
+  height: 85px;
   border: solid black;
   border-width: 0px 0px 1.5px 0px;
   transition: height 1s;
@@ -172,13 +192,13 @@ h4{
 }
 
 #box.clicked {
-  height: 300px;
+  height: 200px;
   overflow-y: scroll;
 }
 
 #box2 {
   width: auto;
-  height: 100px;
+  height: 85px;
   border: solid black;
   border-width: 0px 0px 1.5px 0px;
   transition: height 1s;
@@ -192,7 +212,7 @@ h4{
 
 #box3 {
   width: auto;
-  height: 100px;
+  height: 85px;
   border: solid black;
   border-width: 0px 0px 1.5px 0px;
   transition: height 1s;
@@ -200,6 +220,6 @@ h4{
 }
 
 #box3.clicked {
-  height: 300px;
+  height: 170px;
   overflow-y: scroll;
 }
