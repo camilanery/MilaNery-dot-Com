@@ -4,45 +4,71 @@
 		<title>Hire Me</title>
 		<link rel="stylesheet" type="text/css" href="./css/main.css">
 		<link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
 
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	</head>
 
 	<body>
 
 <div class="wrapper">
 
-		<div class="content">
-		<img src="./images/YarisLoading7.gif" alt="Loading...">
+
+		<div class="navigation">
+
 		<div class="name">
-			MILA <br> NERY
+			<img class="yaris" src="./images/YarisLoading7.gif" alt="Loading...">
+			<a href="http://milanery.com"> MILA <br> NERY </a>
 		</div>
 
 
-		 		<div id="box">
+		 		<div id="box1" class="drawer">
 					<div class="about">
-						<h2> about </h2> <h5 class="SeeMore2" style="float:right; padding:none; margin-top:-95px;"> + </h5>
+						<h2 class="resize"> about </h2> <h5 class="SeeMore resize" style="float:right; padding:none; margin-top:-82px;"> + </h5>
 							<p>Mila Nery is a Brazilian graphic designer based in Baltimore. She got her BFA at the Maryland Institute College of Art. Her website is currently under construction!</p>
 					</div>
 				</div>
 
-				<div id="box2">
+				<div id="box2" class="drawer">
 					<div class="container">
-						<h2> work </h2> <h5 class="SeeMore2" style="float:right; padding:none; margin-top:-95px;"> + </h5>
+						<h2 class="resize"> work </h2> <h5 class="SeeMore resize" style="float:right; padding:none; margin-top:-82px;"> + </h5>
 
-							<a href="/project1.html"><div class="projects">1</div></a>
-							<a href="/project2.html"><div class="projects">2</div></a>
-							<a href="/project3.html"><div class="projects">3</div></a>
-							<a href="/project4.html"><div class="projects">4</div></a>
+						<div class="Projects" id="behance-magix">
+
+							<!-- this would be your project-card mustache template -->
+
+							<div class="ProjectIcon" data-itemName="project1">1</div>
+							<!-- project 1 -->
+
+
+
+
+							<div class="ProjectIcon" data-itemName="project2">2</div>
+							<!-- project 2 -->
+
+
+
+
+							<div class="ProjectIcon" data-itemName="project3">3</div>
+							<!-- project 3 -->
+
+
+
+
+							<div class="ProjectIcon" data-itemName="Project4">4</div>
+							<!-- project 4 -->
+
+							<div class="gap"> </div>
+							<div class="gap"> </div>
+							<div class="gap"> </div>
 					</div>
 				</div>
+			</div>
 
 
 
-
-					<div id="box3">
+					<div id="box3" class="drawer">
 						<div class="Contact">
-							<h2> contact </h2> <h5 class="SeeMore2" style="float:right; padding:none; margin-top:-95px;"> + </h5>
+							<h2 class="resize"> contact </h2> <h5 class="SeeMore resize" style="float:right; padding:none; margin-top:-82px;"> + </h5>
 							<ul>
 									<li> <a href="mailto:cnery@mica.edu">Email Me</a> </li>
 									<li> <a href="http://twitter.com/home/?status= Hello @Yaris_Fun_Club !!! ">Tweet Me</a> </li>
@@ -53,6 +79,39 @@
 					</div>
 
 			</div>
+
+			<div class="popups" id="dynamic-pages">
+				<!-- this is where project-page will print out.. -->
+
+				<div class="project_popup project1 hidden">
+					<div class="inner">
+						<a class="close" href="#">close</a>
+							<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lobortis ut elit sed condimentum. Morbi eleifend urna sed aliquam viverra. Nulla neque turpis, condimentum eu nunc a, pellentesque porta metus. Nullam et viverra arcu. Morbi volutpat mi nec dolor rutrum dictum. Pellentesque et ligula risus. Donec tellus eros, ullamcorper a ante ac, aliquet porta enim. Sed turpis leo, euismod malesuada viverra eu, scelerisque euismod metus. Nulla iaculis lectus erat, quis eleifend ipsum malesuada sit amet. Sed id lacus ac dolor sollicitudin suscipit. Phasellus justo tellus, molestie nec mi vitae, euismod imperdiet nibh. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+					</div>
+				</div>
+
+				<div class="project_popup project2 hidden">
+					<div class="inner">
+						<a class="close" href="#">exit</a>
+						<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lobortis ut elit sed condimentum. Morbi eleifend urna sed aliquam viverra. Nulla neque turpis, condimentum eu nunc a, pellentesque porta metus. Nullam et viverra arcu. Morbi volutpat mi nec dolor rutrum dictum. Pellentesque et ligula risus. Donec tellus eros, ullamcorper a ante ac, aliquet porta enim. Sed turpis leo, euismod malesuada viverra eu, scelerisque euismod metus. Nulla iaculis lectus erat, quis eleifend ipsum malesuada sit amet. Sed id lacus ac dolor sollicitudin suscipit. Phasellus justo tellus, molestie nec mi vitae, euismod imperdiet nibh. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+					</div>
+				</div>
+
+				<div class="project_popup project3 hidden">
+					<div class="inner">
+						<a class="close" href="#">X</a>
+						<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lobortis ut elit sed condimentum. Morbi eleifend urna sed aliquam viverra. Nulla neque turpis, condimentum eu nunc a, pellentesque porta metus. Nullam et viverra arcu. Morbi volutpat mi nec dolor rutrum dictum. Pellentesque et ligula risus. Donec tellus eros, ullamcorper a ante ac, aliquet porta enim. Sed turpis leo, euismod malesuada viverra eu, scelerisque euismod metus. Nulla iaculis lectus erat, quis eleifend ipsum malesuada sit amet. Sed id lacus ac dolor sollicitudin suscipit. Phasellus justo tellus, molestie nec mi vitae, euismod imperdiet nibh. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+					</div>
+				</div>
+
+				<div class="project_popup Project4 hidden">
+					<div class="inner">
+						<a class="close" href="#">done</a>
+						<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lobortis ut elit sed condimentum. Morbi eleifend urna sed aliquam viverra. Nulla neque turpis, condimentum eu nunc a, pellentesque porta metus. Nullam et viverra arcu. Morbi volutpat mi nec dolor rutrum dictum. Pellentesque et ligula risus. Donec tellus eros, ullamcorper a ante ac, aliquet porta enim. Sed turpis leo, euismod malesuada viverra eu, scelerisque euismod metus. Nulla iaculis lectus erat, quis eleifend ipsum malesuada sit amet. Sed id lacus ac dolor sollicitudin suscipit. Phasellus justo tellus, molestie nec mi vitae, euismod imperdiet nibh. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+					</div>
+				</div>
+			</div>
+
 </div>
 
 
@@ -61,36 +120,133 @@
 
 		<div class="note">
 			<h3>UNDER CONSTRUCTION</h3>
-			<h4>check back later !! :~) </h4>
+			<h3>check back later !! :~) </h3>
 		</div>
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+		<!-- when clicked, About opens, SeeMore turns + to - and all other menus are closed. When a different menu opens,
+	 				any open menu closes. -->
+
+	<script>
+
+	$('.resize').on('click', function() {
+		$(this).parent().parent('.drawer').toggleClass('clicked');
+
+		var plusMinus = $(this).parent().find('h5');
+
+		plusMinus.toggleClass('SeeMore');
+		if(plusMinus.hasClass('SeeMore')){
+			plusMinus.text('+');
+		} else {
+			plusMinus.text('-');
+		}
+	});
+
+	// TESTING
+
+	// <script type="text/javascript">
+	//   $(document).ready(function() {
+	//   		var id = '#dialog';
+	//   		//Get the screen height and width
+	//   		var maskHeight = $(document).height();
+	//   		var maskWidth = $(window).width();
+	//   		//Set heigth and width to mask to fill up the whole screen
+	//   		$('#mask').css({'width':maskWidth,'height':maskHeight});
+	//   		//transition effect
+	//   		$('#mask').fadeIn(200);
+	//   		$('#mask').fadeTo("slow",5);
+	//   		//Get the window height and width
+	//   		var winH = $(window).height();
+	//   		var winW = $(window).width();
+	//   		//Set the popup window to center
+	//   		$(id).css('top',  winH/2-$(id).height()/2);
+	//   		$(id).css('left', winW/2-$(id).width()/2);
+	//   		//transition effect
+	//   		$(id).fadeIn(2000);
+	//   	//if close button is clicked
+	//   	$('.window .close').click(function (e) {
+	//   		//Cancel the link behavior
+	//   		e.preventDefault();
+	//   		$('#mask').hide();
+	//   		$('.window').hide();
+	//   	});
+	//   	//if mask is clicked
+	//   	$('#mask').click(function () {
+	//   		$(this).hide();
+	//   		$('.window').hide();
+	//   	});
+	//   });
+	//
+
+
+
+	// $('.SpellIcon').click(function() {
+	//   var itemName = $(this).attr('data-itemName');
+	//   var showMe = '.spell_popup.' + itemName;
+	//   $(showMe).removeClass('hidden').addClass('overlay');
+	// })
+	//
+	// var hidePopup = function() {
+	//   return $('.spell_popup').removeClass('overlay').addClass('hidden');
+	// };
+	//
+	//
+	// $('.spell_popup .close').click(function(event) {
+	//   event.preventDefault;
+	//   hidePopup();
+	// })
+	//
+	// $('.CastButton').click(function() {
+	//   var clickedThing = $(this);
+	//
+	//   var effect = function() {
+	//     return clickedThing.next('.animation_popup').show( 1 ).delay( 13700 ).hide( 1 );
+	//   };
+	//
+	//
+	//   $.when( effect() ).done(function() {
+	//     hidePopup();
+	//   });
+	// });
+
+
+	$('.ProjectIcon').click(function() {
+	  var itemName = $(this).attr('data-itemName');
+	  var showMe = '.project_popup.' + itemName;
+	  $(showMe).removeClass('hidden').addClass('overlay');
+	})
+
+	var hidePopup = function() {
+	  return $('.project_popup').removeClass('overlay').addClass('hidden');
+	};
+
+
+	$('.project_popup .close').click(function(event) {
+	  event.preventDefault;
+	  hidePopup();
+	})
+
+
+
+
+	// $('.CastButton').click(function() {
+	//   var clickedThing = $(this);
+	//
+	//   var effect = function() {
+	//     return clickedThing.next('.animation_popup').show( 1 ).delay( 13700 ).hide( 1 );
+	//   };
+	//
+	//
+	//   $.when( effect() ).done(function() {
+	//     hidePopup();
+
+
+
+
+	</script>
 
 	</body>
 
 </html>
-
-	<!-- when clicked, About opens, SeeMore2 turns + to - and all other menus are closed. When a different menu opens,
- 				any open menu closes. -->
-
-<script>
-$('#box').on('click', function() {
-$(this).toggleClass('clicked');
-});
-
-$('#box2').on('click', function() {
-$(this).toggleClass('clicked');
-});
-
-$('#box3').on('click', function() {
-$(this).toggleClass('clicked');
-});
-
-$('.SeeMore2').click(function(){
-	var $this = $(this);
-	$this.toggleClass('SeeMore2');
-	if($this.hasClass('SeeMore2')){
-		$this.text('+');
-	} else {
-		$this.text('-');
-	}
-});
-</script>

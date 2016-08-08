@@ -1,75 +1,95 @@
 @import "compass/css3";
 
 body{
-  /*visibility: visible;*/
+  background-color: rgb(151, 163, 230);
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 .wrapper{
-  /*position: relative;*/
-  max-width: 70% ;
-  max-height: 70% ;
-  transform: translate(30%, 30%);
+  top:0;
+  left:0;
+  bottom: 0;
+  right: 0;
+  display: inline;
+  position: absolute;
+  background-color: white;
+  margin: 10px 10px 10px 10px;
 }
+
+.yaris{
+  position: absolute;
+  z-index: -10;
+  width: 230%;
+  top:-50px;
+  left:-75px;
+}
+
+
+.navigation {
+  /*background-color: white;*/
+  /*z-index: 10;*/
+  position: absolute;
+  max-width: 25% ;
+  max-height: auto ;
+  transform: translate(30%, 0%);
+  top: 200px;
+}
+
 
 .name{
-  margin-left: -200px;
-  margin-top: -120px;
-  /*margin: 40px;*/
-  position: fixed;
-  color: #999;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 600;
-  font-size: 65px;
   color: rgb(151, 163, 230);
-  z-index: 10000;
-}
-
-.content {
-  position: absolute;
-  margin: 280px 0px 0px 0px ;
-  width: 50%;
-  height: 50%;
-  transform: translate(30%, 30%);
-
-
-}
-
-img{
-  width: 1500px;
-  height: 1260px;
+  margin-top: -100px;
   position: fixed;
-  z-index: -5;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -35%);
-  z-index: -20;
-  -webkit-filter: opacity(50%); /* Chrome, Safari, Opera */
-  filter: opacity(60%);
+  line-height: .9;
+  font-family: 'Ubuntu Condensed', sans-serif;
+  font-weight: 600;
+  font-size: 50px;
+  text-decoration: none;
+}
+
+.name:hover{
+  color: #999;
+  cursor: crosshair;
+  text-decoration: none;
+}
+
+a {
+  color: rgb(151, 163, 230);
+  text-decoration: none;
+  cursor: crosshair;
+
+}
+
+a:hover{
+  text-decoration: none;
+  color: #999;
+  cursor: crosshair;
+
 }
 
 
 
-h2 {
+h2{
   color: #999;
   font-family: 'Roboto', sans-serif;
   font-weight: 200;
-  /*line-height: 1.4em;*/
-  font-size: 23px;
+  font-size: 17px;
   list-style: none;
   text-decoration: none;
-  padding: 20px 0px 12px 0px;
+  padding: 30px 0px 15px 0px;
 }
 
-/*h2:hover {
-  color: lightpink;
+/*h2:hover{
+  color: rgb(151, 163, 230);
   cursor: crosshair;
 }*/
+
 
 h5{
   color: #999;
   font-family: 'Roboto', sans-serif;
-  font-weight: 200;
-  /*line-height: 1.4em;*/
-  font-size: 29px;
+  line-height: 2.4em;
+  font-size: 20px;
   list-style: none;
   text-decoration: none;
   padding: 20px 0px 20px 0px;
@@ -85,30 +105,38 @@ h6{
   font-family: 'Roboto', sans-serif;
   font-weight: 200;
   text-align: center;
-  /*padding-bottom: 20px;*/
 }
 
 p {
-  margin-top: -10px;
+  /*margin-top: -10px;*/
   font-family: 'Roboto', sans-serif;
   font-size: 13px;
   font-weight: lighter;
 }
 
 
-.projects{
-  position: relative;
-  z-index: 1000;
+.Projects li {
   display: inline-block;
-  max-width: 140px;
-  max-height: 75px;
-  margin: 10px 10px 10px 0px;
-  border: 3px solid black;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  padding: 37.5px 70px 37.5px 70px;
+  margin: 12px 10px 0px 0px;
 }
 
+/*.ProjectIcon{
+  position: relative;
+  z-index: 1000;
+  max-height: 50%;
+  max-width: 100%;
+  width: 140px;
+  height: 70px;
+  border: 2px solid black;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}*/
+
+
+/*.ProjectIcon:hover{
+  border: 2px solid rgb(151, 163, 230);
+  cursor: crosshair;
+}*/
 
 ul {
   list-style-type: none;
@@ -126,9 +154,6 @@ li {
 li a {
   display: block;
   padding: 10px 20px 10px 2px;
-}
-
-a {
   text-decoration: none;
   color: black;
   font-family: 'Roboto', sans-serif;
@@ -136,30 +161,31 @@ a {
   font-weight: lighter;
 }
 
-a:hover {
+li a:hover {
   text-decoration: none;
   color: rgb(151, 163, 230);
   cursor: crosshair;
 }
 
+
 .overlay {
   height: 100%;
   width: 100%;
-  position: fixed; /* Stay in place */
-  z-index: 100; /* Sit on top */
+  position: fixed;
+  z-index: 100;
   left: 0;
   top: 0;
-  background-color: red;
-  background-color: rgba(190,190,255, 0.7); /* Black w/opacity */
-  overflow-x: hidden; /* Disable horizontal scroll */
+  background-color: rgba(190,190,255, 0.7);
+  overflow-x: hidden;
   visibility: visible;
 }
+
 
 .note {
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-385px,-185px);
+  transform: translate(-385px,-300px);
   z-index: 120;
   text-align: center;
   margin-top: -40px;
@@ -169,34 +195,28 @@ h3{
   color: white;
   font-family: 'Roboto', sans-serif;
   font-size:80px;
-
-}
-
-h4{
-  color: white;
-  font-family: 'Roboto', sans-serif;
-  font-size:40px;
-  position: relative;
-  margin-top: -80px;
 }
 
 
-#box {
+
+
+#box1 {
   width: auto;
   height: 85px;
   border: solid black;
   border-width: 0px 0px 1.5px 0px;
   transition: height 1s;
   overflow-y: hidden;
-
 }
 
-#box.clicked {
+#box1.clicked {
   height: 200px;
-  overflow-y: scroll;
+  overflow-y: hidden;
 }
 
 #box2 {
+  position: relative;
+  z-index: -10;
   width: auto;
   height: 85px;
   border: solid black;
@@ -221,5 +241,112 @@ h4{
 
 #box3.clicked {
   height: 170px;
-  overflow-y: scroll;
+  overflow-y: hidden;
+}
+
+
+
+
+
+
+
+/*TESTING*/
+
+
+.project_popup .inner {
+    position: absolute;
+    max-width: 50%;
+    max-height: 70% ;
+    transform: translate(67%, -12%);
+    top: 200px;
+    border: 2px dotted black;
+    background-color: white;
+    padding: 35px;
+    height: 700px;
+  }
+
+.hidden {
+    display: none;
+  }
+
+
+.close {
+    position: relative;
+    float: right;
+    color: #999;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 200;
+    font-size: 13px;
+    list-style: none;
+    text-decoration: none;
+    top:-20px;
+    right:-20px;
+  }
+.close:hover{
+  cursor: crosshair;
+}
+
+.popups{
+    /*left: 300px;*/
+
+   /*transform: translate(35%,0%);*/
+   /*margin-top: 100px;*/
+
+  }
+
+ .Projects .ProjectIcon{
+  /*margin-top:-30px;*/
+  border: 2px solid black;
+  margin: 8px 8px 0px 0px;
+}
+
+.ProjectIcon:hover{
+  border: 2px solid rgb(151, 163, 230);
+  cursor: crosshair;
+}
+
+.Projects{
+  padding: 3% 3% 0 ;
+  text-align: justify;
+  font-size: 0;
+  /*background: #68b8c4;*/
+}
+
+.Projects:after{
+  content: '';
+  display: inline-block;
+  width: 99.5%;
+}
+
+.Projects .ProjectIcon,
+.Projects .gap{
+  display: inline-block;
+  width: 30%;
+}
+
+.Projects .ProjectIcon{
+  text-align: justify;
+  background-color: black;
+  margin-bottom: 4%;
+  /*display: none; <-- uncomment this rule for use with MixItUp*/
+}
+
+.Projects .ProjectIcon:before{
+  content: '';
+  display: inline-block;
+  padding-top: 100%;
+}
+
+@media all and (min-width: 200px){
+  .Projects .ProjectIcon,
+  .Projects .gap{
+    width: 35.5%;
+  }
+}
+
+@media all and (min-width: 400px){
+  .Projects .ProjectIcon,
+  .Projects .gap{
+    width: 41.5%;
+  }
 }
