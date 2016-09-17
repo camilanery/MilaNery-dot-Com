@@ -1,11 +1,13 @@
-@import "compass/css3";
+/*@import "compass/css3";*/
 
 body{
+  z-index: -10001;
   background-color: rgb(151, 163, 230);
   overflow-y: hidden;
   overflow-x: hidden;
 }
-.wrapper{
+.fullPage{
+  z-index: -10000;
   top:0;
   left:0;
   bottom: 0;
@@ -25,7 +27,7 @@ body{
 }
 
 
-.navigation {
+.mainMenu {
   /*background-color: white;*/
   /*z-index: 10;*/
   position: absolute;
@@ -36,7 +38,7 @@ body{
 }
 
 
-.name{
+.myName{
   color: rgb(151, 163, 230);
   margin-top: -100px;
   position: fixed;
@@ -47,7 +49,7 @@ body{
   text-decoration: none;
 }
 
-.name:hover{
+.myName:hover{
   color: #999;
   cursor: crosshair;
   text-decoration: none;
@@ -108,42 +110,18 @@ h6{
 }
 
 p {
-  /*margin-top: -10px;*/
   font-family: 'Roboto', sans-serif;
   font-size: 13px;
   font-weight: lighter;
 }
 
 
-.Projects li {
-  display: inline-block;
-  margin: 12px 10px 0px 0px;
-}
-
-/*.ProjectIcon{
-  position: relative;
-  z-index: 1000;
-  max-height: 50%;
-  max-width: 100%;
-  width: 140px;
-  height: 70px;
-  border: 2px solid black;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-}*/
-
-
-/*.ProjectIcon:hover{
-  border: 2px solid rgb(151, 163, 230);
-  cursor: crosshair;
-}*/
-
 ul {
   list-style-type: none;
-  margin: 0;
+  /*margin: 0;*/
   padding: 0;
   overflow: hidden;
-  margin-top: -19px;
+  /*margin-top: -19px;*/
 
 }
 
@@ -168,7 +146,7 @@ li a:hover {
 }
 
 
-.overlay {
+/*.overlay {
   height: 100%;
   width: 100%;
   position: fixed;
@@ -189,7 +167,7 @@ li a:hover {
   z-index: 120;
   text-align: center;
   margin-top: -40px;
-}
+}*/
 
 h3{
   color: white;
@@ -253,7 +231,7 @@ h3{
 /*TESTING*/
 
 
-.project_popup .inner {
+/*.project_popup .inner {
     position: absolute;
     max-width: 50%;
     max-height: 70% ;
@@ -267,10 +245,10 @@ h3{
 
 .hidden {
     display: none;
-  }
+  }*/
 
 
-.close {
+/*.close {
     position: relative;
     float: right;
     color: #999;
@@ -281,72 +259,108 @@ h3{
     text-decoration: none;
     top:-20px;
     right:-20px;
-  }
-.close:hover{
-  cursor: crosshair;
-}
+  }*/
 
-.popups{
+/*.close:hover{
+  cursor: crosshair;
+}*/
+
+/*.popups{
     /*left: 300px;*/
 
    /*transform: translate(35%,0%);*/
-   /*margin-top: 100px;*/
+   /*margin-top: 100px;
+   }*/
 
-  }
 
- .Projects .ProjectIcon{
-  /*margin-top:-30px;*/
-  border: 2px solid black;
-  margin: 8px 8px 0px 0px;
+
+
+/*******/
+#dynamic-pages .project-page {
+  /*position: fixed;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  z-index: 9999999999;
+  background-color: rgba(222,222,222,.9);
+  overflow-y: auto;
+  border: 1em solid gray;*/
+
+  box-sizing: border-box;
+  position: absolute;
+  height: 77%;
+  width: 45%;
+  top: 100px;
+  left: 43%;
+  border: 2px dotted black;
+  background-color: white;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding: 3em;
 }
 
-.ProjectIcon:hover{
-  border: 2px solid rgb(151, 163, 230);
-  cursor: crosshair;
+#dynamic-pages img {
+  max-width: 100%;
+  height: auto;
 }
 
-.Projects{
-  padding: 3% 3% 0 ;
-  text-align: justify;
-  font-size: 0;
-  /*background: #68b8c4;*/
+.project-page button{
+  color: red;
 }
 
-.Projects:after{
-  content: '';
-  display: inline-block;
-  width: 99.5%;
+.project-page button.close {
+  position: absolute;
+  right: 1em;
+  top:1em;
+  height: 2em;
+  width: 2em;
+  border-radius: 50%;
+  background: #999;
+  border: none;
+  color: white;
 }
 
-.Projects .ProjectIcon,
-.Projects .gap{
-  display: inline-block;
-  width: 30%;
+.project-page button.close:hover{
+  background: rgb(151, 163, 230);
 }
 
-.Projects .ProjectIcon{
-  text-align: justify;
-  background-color: black;
-  margin-bottom: 4%;
-  /*display: none; <-- uncomment this rule for use with MixItUp*/
+.projects {
+  margin-top: -18em;
+  margin-bottom: 2em;
+  align-items: stretch;
 }
 
-.Projects .ProjectIcon:before{
-  content: '';
-  display: inline-block;
-  padding-top: 100%;
+.project a.wrapping {
+  color: rgba(47,41,38,1);
+  text-decoration: none;
+  display: block;
 }
 
-@media all and (min-width: 200px){
-  .Projects .ProjectIcon,
-  .Projects .gap{
-    width: 35.5%;
-  }
+.project h2 {
+  /*padding-bottom: -14px;*/
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.2;
+  /*margin-left: -3px;*/
 }
 
-@media all and (min-width: 400px){
-  .Projects .ProjectIcon,
-  .Projects .gap{
-    width: 41.5%;
-  }
+.project-page img {
+  text-align: center;
+  left: auto;
+  right: auto;
 }
+
+.project-page h1 {
+  color: rgb(151, 163, 230);
+  margin-top: -5px;
+  line-height: .9;
+  font-family: 'Ubuntu Condensed', sans-serif;
+  font-weight: 600;
+  font-size: 50px;
+  text-decoration: none;
+}
+
+/*.projects {
+  margin-top:-100px;
+}*/
