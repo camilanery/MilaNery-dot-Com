@@ -1,11 +1,12 @@
 <!DOCTYPE html>
+
 <html>
 	<head>
 		<meta charset="UTF-8" />
 		<title>Hire Me</title>
 
 		<link rel="stylesheet" type="text/css" href="./css/main.css">
-		<link rel="stylesheet" type="text/css" href="grid.css" />
+		<!-- <link rel="stylesheet" type="text/css" href="grid.css" /> -->
 		<!-- <link rel="stylesheet" type="text/css" href="mobile-menu.css" /> -->
 
 		<link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
@@ -33,21 +34,30 @@
 						</div>
 					</div>
 
+
 					<div id="box2" class="drawer">
 						<div class="workSection">
 							<h2 class="resize"> work </h2> <h5 class="SeeMore resize" style="float:right; padding:none; margin-top:-82px;"> + </h5>
 
-							<div class="projects" id="behance-magix">
+							<div id="behance-magix" class="group">
+								<!-- placeholder -->
+									<img src="https://unsplash.it/400/300/?random" />
+									<p>This will be erased when javascript draws our new content.</p>
 
-								<img src="https://unsplash.it/400/300/?random" />
-								<p>This will be erased when javascript draws our new content.</p>
-
-								<!-- this would be your project-card mustache template -->
-
+								<!-- this is the template that each behance thing with use to print to the browser -->
+								<script id="project-cards" type="text/template">
+									{{#projects}}
+									<div class="project two columns" id="b{{id}}">
+										<a class="wrapping" href="#{{id}}" data-project-id="{{id}}">
+											<img src="{{covers.115}}" alt="{{name}}" />
+										</a>
+									</div>
+									{{/projects}}
+								</script>
 							</div>
+
 						</div>
 					</div>
-
 
 
 					<div id="box3" class="drawer">
@@ -63,66 +73,6 @@
 					</div>
 
 				</div>
-
-						<!-- this is the template that each behance thing with use to print to the browser -->
-
-						<div class="container">
-							<div id="behance-magix" class="group">
-
-						<script id="project-cards" type="text/template">
-							{{#projects}}
-							<div class="two columns" id="b{{id}}">
-								<a class="wrapping" href="#{{id}}" data-project-id="{{id}}">
-
-									 <img src="{{covers.230}}" alt="{{name}}" />
-									 <!-- <h2 class="name">{{name}}</h2> -->
-
-									<!-- <div class="info">
-									</div> -->
-								</a>
-							</div>
-							{{/projects}}
-						</script>
-
-					</div>
-				</div>
-
-
-
-
-
-
-					<!-- <div class="project_popup project1 hidden">
-						<div class="inner">
-							<a class="close" href="#">close</a>
-								<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lobortis ut elit sed condimentum. Morbi eleifend urna sed aliquam viverra. Nulla neque turpis, condimentum eu nunc a, pellentesque porta metus. Nullam et viverra arcu. Morbi volutpat mi nec dolor rutrum dictum. Pellentesque et ligula risus. Donec tellus eros, ullamcorper a ante ac, aliquet porta enim. Sed turpis leo, euismod malesuada viverra eu, scelerisque euismod metus. Nulla iaculis lectus erat, quis eleifend ipsum malesuada sit amet. Sed id lacus ac dolor sollicitudin suscipit. Phasellus justo tellus, molestie nec mi vitae, euismod imperdiet nibh. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
-						</div>
-					</div>
-
-					<div class="project_popup project2 hidden">
-						<div class="inner">
-							<a class="close" href="#">exit</a>
-							<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lobortis ut elit sed condimentum. Morbi eleifend urna sed aliquam viverra. Nulla neque turpis, condimentum eu nunc a, pellentesque porta metus. Nullam et viverra arcu. Morbi volutpat mi nec dolor rutrum dictum. Pellentesque et ligula risus. Donec tellus eros, ullamcorper a ante ac, aliquet porta enim. Sed turpis leo, euismod malesuada viverra eu, scelerisque euismod metus. Nulla iaculis lectus erat, quis eleifend ipsum malesuada sit amet. Sed id lacus ac dolor sollicitudin suscipit. Phasellus justo tellus, molestie nec mi vitae, euismod imperdiet nibh. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
-						</div>
-					</div>
-
-					<div class="project_popup project3 hidden">
-						<div class="inner">
-							<a class="close" href="#">X</a>
-							<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lobortis ut elit sed condimentum. Morbi eleifend urna sed aliquam viverra. Nulla neque turpis, condimentum eu nunc a, pellentesque porta metus. Nullam et viverra arcu. Morbi volutpat mi nec dolor rutrum dictum. Pellentesque et ligula risus. Donec tellus eros, ullamcorper a ante ac, aliquet porta enim. Sed turpis leo, euismod malesuada viverra eu, scelerisque euismod metus. Nulla iaculis lectus erat, quis eleifend ipsum malesuada sit amet. Sed id lacus ac dolor sollicitudin suscipit. Phasellus justo tellus, molestie nec mi vitae, euismod imperdiet nibh. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
-						</div>
-					</div>
-
-					<div class="project_popup Project4 hidden">
-						<div class="inner">
-							<a class="close" href="#">done</a>
-							<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lobortis ut elit sed condimentum. Morbi eleifend urna sed aliquam viverra. Nulla neque turpis, condimentum eu nunc a, pellentesque porta metus. Nullam et viverra arcu. Morbi volutpat mi nec dolor rutrum dictum. Pellentesque et ligula risus. Donec tellus eros, ullamcorper a ante ac, aliquet porta enim. Sed turpis leo, euismod malesuada viverra eu, scelerisque euismod metus. Nulla iaculis lectus erat, quis eleifend ipsum malesuada sit amet. Sed id lacus ac dolor sollicitudin suscipit. Phasellus justo tellus, molestie nec mi vitae, euismod imperdiet nibh. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
-						</div>
-					</div>
-				</div> -->
-
-	</div>
-
 
 
 <!--
@@ -157,6 +107,9 @@
 
 	<!-- // TESTING -->
 
+
+
+
 	<div id="dynamic-pages">
 		<!-- individual pages will appear to "print" here -->
 	</div>
@@ -171,7 +124,6 @@
 
 	<script>
 		var url = 'https://api.behance.net/v2/users/' + userName + '/projects/?api_key=' + apiKey +'&per_page=25&callback=?';
-		/* some issue where no more than 25 can be returned at a time, there are ways to ask for more? https://help.behance.net/hc/communities/public/questions/202357274-Number-of-Behance-API-request-results-limited-to-25- */
 		console.log('connected to ' + url + '.');
 
 		var matchingHeights = function() {
@@ -193,9 +145,8 @@
 			var info = Mustache.to_html(template, data);
 			$('#behance-magix').html(info);
 
-			// // try to get all the things printing out @ the same height.
 			$('.project img').load(function() {
-			  matchingHeights();
+				matchingHeights();
 			});
 
 			$('.project a').click(function() {
@@ -221,6 +172,18 @@
 <!-- Project Page !!! -->
 
 
+<!-- <script id="project-page" type="text/template">
+	<div class="project-page" id="project-{{project.id}}">
+		<div class="container">
+			<img src="{{project.covers.115}}" alt="{{project.name}}" />
+			<h1>{{project.name}}</h1>
+			<p>{{project.description}}</p>
+
+		</div>
+		<button class="close">X</button>
+	</div>
+</script> -->
+
 	<script id="project-page" type="text/template">
 		<div class="project-page" id="project-{{project.id}}">
 			<div class="container">
@@ -229,7 +192,7 @@
 				<h1>{{project.name}}</h1>
 				<p>{{project.description}}</p>
 				<center>
-					<!-- <img src="{{project.covers.original}}" alt="{{project.name}}" />  -->
+					<img src="{{project.covers.original}}" alt="{{project.name}}" />
 				<ul class="modules-list list-reset">
 					{{#project.modules}}
 						<li class="module {{type}}">
@@ -250,6 +213,7 @@
 		</div>
 	</script>
 
+</div>
 
 	</body>
 

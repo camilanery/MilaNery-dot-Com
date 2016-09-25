@@ -28,8 +28,6 @@ body{
 
 
 .mainMenu {
-  /*background-color: white;*/
-  /*z-index: 10;*/
   position: absolute;
   max-width: 25% ;
   max-height: auto ;
@@ -59,14 +57,12 @@ a {
   color: rgb(151, 163, 230);
   text-decoration: none;
   cursor: crosshair;
-
 }
 
 a:hover{
   text-decoration: none;
   color: #999;
   cursor: crosshair;
-
 }
 
 
@@ -80,12 +76,6 @@ h2{
   text-decoration: none;
   padding: 30px 0px 15px 0px;
 }
-
-/*h2:hover{
-  color: rgb(151, 163, 230);
-  cursor: crosshair;
-}*/
-
 
 h5{
   color: #999;
@@ -118,11 +108,8 @@ p {
 
 ul {
   list-style-type: none;
-  /*margin: 0;*/
   padding: 0;
   overflow: hidden;
-  /*margin-top: -19px;*/
-
 }
 
 li {
@@ -157,7 +144,6 @@ li a:hover {
   overflow-x: hidden;
   visibility: visible;
 }
-
 
 .note {
   position: fixed;
@@ -287,12 +273,11 @@ h3{
   overflow-y: auto;
   border: 1em solid gray;*/
 
-  box-sizing: border-box;
-  position: absolute;
-  height: 77%;
+  position: fixed;
+  height: 70%;
   width: 45%;
   top: 100px;
-  left: 43%;
+  left: 40%;
   border: 2px dotted black;
   background-color: white;
   overflow-y: scroll;
@@ -300,12 +285,7 @@ h3{
   padding: 3em;
 }
 
-#dynamic-pages img {
-  max-width: 100%;
-  height: auto;
-}
-
-.project-page button{
+.project-page {
   color: red;
 }
 
@@ -325,31 +305,7 @@ h3{
   background: rgb(151, 163, 230);
 }
 
-.projects {
-  margin-top: -18em;
-  margin-bottom: 2em;
-  align-items: stretch;
-}
 
-.project a.wrapping {
-  color: rgba(47,41,38,1);
-  text-decoration: none;
-  display: block;
-}
-
-.project h2 {
-  /*padding-bottom: -14px;*/
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.2;
-  /*margin-left: -3px;*/
-}
-
-.project-page img {
-  text-align: center;
-  left: auto;
-  right: auto;
-}
 
 .project-page h1 {
   color: rgb(151, 163, 230);
