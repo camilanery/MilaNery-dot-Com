@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head> <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> </head>
+
+<body>
+<div id="box"></div>
+</body>
+
+</html>
+
+<style>
+#box {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #ccc;
+    transition: width 2s;
+}
+
+#box.clicked {
+    width: 200px;
+}
+
+
+</style>
+
+<script>
+$('#box').on('click', function() {
+    $(this).toggleClass('clicked');
+});
+</script>
