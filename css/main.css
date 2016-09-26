@@ -24,6 +24,7 @@ body{
   width: 230%;
   top:-60px;
   left:-85px;
+  pointer-events: none;
 }
 
 .portrait{
