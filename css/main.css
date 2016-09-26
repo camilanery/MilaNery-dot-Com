@@ -22,8 +22,8 @@ body{
   position: absolute;
   z-index: -10;
   width: 230%;
-  top:-50px;
-  left:-75px;
+  top:-60px;
+  left:-80px;
 }
 
 .portrait{
@@ -54,28 +54,25 @@ body{
   margin-top: -100px;
   position: fixed;
   line-height: .9;
-  font-family: 'Ubuntu Condensed', sans-serif;
-  font-weight: 600;
-  font-size: 50px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 45px;
   text-decoration: none;
 }
 
 .myName:hover{
   color: #999;
-  cursor: crosshair;
   text-decoration: none;
 }
 
 a {
   color: rgb(151, 163, 230);
   text-decoration: none;
-  cursor: crosshair;
 }
 
 a:hover{
   text-decoration: none;
   color: #999;
-  cursor: crosshair;
 }
 
 
@@ -102,7 +99,6 @@ h5{
 
 h5:hover {
   color: rgb(151, 163, 230);
-  cursor: crosshair;
 }
 
 h6{
@@ -142,7 +138,6 @@ li a {
 li a:hover {
   text-decoration: none;
   color: rgb(151, 163, 230);
-  cursor: crosshair;
 }
 
 
@@ -310,7 +305,7 @@ h3{
 .project-page button.close {
   position: absolute;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 18px;
   text-decoration: none;
   background: none;
   border: none;
@@ -330,10 +325,10 @@ h3{
 .project-page h1 {
   color: rgb(151, 163, 230);
   margin-top: -5px;
-  line-height: .9;
-  font-family: 'Ubuntu Condensed', sans-serif;
-  font-weight: 600;
-  font-size: 50px;
+  /*line-height: .9;*/
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 28px;
   text-decoration: none;
 }
 
