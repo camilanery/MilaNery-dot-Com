@@ -119,6 +119,8 @@ p {
   font-family: 'Roboto', sans-serif;
   font-size: 13px;
   font-weight: lighter;
+  line-height: 1.2em;
+  letter-spacing: normal;
 }
 
 
