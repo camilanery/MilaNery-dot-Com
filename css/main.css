@@ -286,23 +286,27 @@ h3{
 }
 
 .project-page {
-  color: red;
+  color: black;
+  font-family: 'Roboto', sans-serif;
+  line-height: 17px;
 }
 
 .project-page button.close {
   position: absolute;
-  right: 1em;
-  top:1em;
-  height: 2em;
-  width: 2em;
-  border-radius: 50%;
-  background: #999;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  background: none;
   border: none;
-  color: white;
+  margin: 0px;
+  padding: 0px;
+  right: 15px;
+  top: 10px;
+  color: #999;
 }
 
 .project-page button.close:hover{
-  background: rgb(151, 163, 230);
+  color: rgb(151, 163, 230);
 }
 
 
@@ -317,6 +321,29 @@ h3{
   text-decoration: none;
 }
 
-/*.projects {
-  margin-top:-100px;
-}*/
+
+.project-page img {
+  max-width: 100%;
+}
+
+#project-images {
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
+  /*border: 1px solid black;*/
+}
+
+.banner-box {
+  display: inline-block;
+  width: 90%;
+  max-width: 455px;
+  min-height: 400px;
+  padding: 1%;
+  /*border: 1px solid pink;*/
+  }
+
+.content {
+  width: 95%;
+  margin: 2%;
+  /*border: 1px solid rgb(151, 163, 230);*/
+}
