@@ -22,7 +22,7 @@ body{
   position: absolute;
   z-index: -10000;
   width: 230%;
-  top:-60px;
+  top:-70px;
   left:-85px;
   pointer-events: none;
 }
@@ -45,16 +45,16 @@ body{
 
 .mainMenu {
   position: absolute;
-  max-width: 25%;
+  max-width: 22%;
   max-height: auto ;
   transform: translate(30%, 0%);
-  top: 200px;
+  top: 220px;
 }
 
 
 .myName{
   color: rgb(151, 163, 230);
-  margin-top: -100px;
+  margin-top: -120px;
   position: fixed;
   line-height: .9;
   font-family: 'Roboto', sans-serif;
