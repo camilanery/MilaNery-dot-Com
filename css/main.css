@@ -26,10 +26,23 @@ body{
   left:-75px;
 }
 
+.portrait{
+  position: relative;
+  z-index: 1;
+  top:-8px;
+  left:20%;
+  width: 40%;
+  border: 1px solid rgb(151, 163, 230);
+  border-radius: 100px;
+  max-width: 500px;
+  text-align: center;
+
+}
+
 
 .mainMenu {
   position: absolute;
-  max-width: 25% ;
+  max-width: 25%;
   max-height: auto ;
   transform: translate(30%, 0%);
   top: 200px;
@@ -165,6 +178,7 @@ h3{
 
 
 #box1 {
+  background-color: white;
   width: auto;
   height: 85px;
   border: solid black;
@@ -174,11 +188,12 @@ h3{
 }
 
 #box1.clicked {
-  height: 200px;
-  overflow-y: hidden;
+  height: 300px;
+  overflow-y: scroll;
 }
 
 #box2 {
+  background-color: white;
   position: relative;
   z-index: -10;
   width: auto;
@@ -195,6 +210,7 @@ h3{
 }
 
 #box3 {
+  background-color: white;
   width: auto;
   height: 85px;
   border: solid black;
