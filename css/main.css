@@ -29,12 +29,12 @@ body{
 
 .portrait{
   float: left;
-  margin: 0px 25px 25px 0px;
+  margin: 0px 20px 18px 15px;
   position: relative;
   z-index: 1;
   top:-8px;
   /*left:20%;*/
-  width: 38%;
+  width: 33%;
   border: 1px solid rgb(151, 163, 230);
   border-radius: 1px;
   max-width: 500px;
@@ -113,7 +113,7 @@ h6{
   font-family: 'Roboto', sans-serif;
   font-weight: 200;
   text-align: center;
-  line-height: 1.2em;
+  /*line-height: 1.2em;*/
 
 
 }
@@ -126,20 +126,24 @@ p {
   letter-spacing: normal;
 }
 
+.contacts{
+  float: left;
+  margin-top: -15px;
+}
 
-ul {
+.contacts ul {
   list-style-type: none;
   padding: 0;
   overflow: hidden;
 }
 
-li {
+.contacts li {
   float: left;
 }
 
-li a {
+.contacts li a {
   display: block;
-  padding: 10px 20px 10px 2px;
+  padding: 0px 20px 0px 0px;
   text-decoration: none;
   color: black;
   font-family: 'Roboto', sans-serif;
@@ -147,7 +151,7 @@ li a {
   font-weight: lighter;
 }
 
-li a:hover {
+.contacts li a:hover {
   text-decoration: none;
   color: rgb(151, 163, 230);
   cursor: pointer;

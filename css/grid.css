@@ -45,16 +45,18 @@
   .row,
   .group,
   .grouped {
-    margin-left: 15px;
-    /*margin-right: -2px;*/
+    margin-left: 10px;
+    margin-right: -2px;
   }
 
   .column,
   .columns {
     /* this will make things a column */
     float: left;
-    padding-left: 2px; /* make this half of what you want your gutters to be */
-    padding-right: 2px; /* make this half of what you want your gutters to be */
+    padding-left: 11px; /* make this half of what you want your gutters to be */
+    padding-right: 11px; /* make this half of what you want your gutters to be */
+    padding-bottom: 15px;
+
   }
 
   /* these styles declare column widths */
