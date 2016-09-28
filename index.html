@@ -7,7 +7,7 @@
 
 		<link rel="stylesheet" type="text/css" href="./css/main.css">
 		<link rel="stylesheet" type="text/css" href="./css/newgrid.css"/>
-		<!-- <link rel="stylesheet" type="text/css" href="grid.css" /> -->
+		<link rel="stylesheet" type="text/css" href="./css/grid.css" />
 		<!-- <link rel="stylesheet" type="text/css" href="mobile-menu.css" /> -->
 
 		<link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
@@ -41,27 +41,30 @@
 						<div class="workSection">
 							<h2 class="resize"> Work </h2> <h5 class="SeeMore resize" style="float:right; padding:none; margin-top:-80px;"> + </h5>
 
+						<div class="container">
 							<div id="behance-magix" class="group">
 								<!-- placeholder -->
+									<p>Hi! If you are reading this- my site has reached its limit! I'm using Behance's API to plug in my work and the API limit is 150 requests per hour. Why don't you grab a snack and come back in a few? :~)</p>
+									<p> <a href="https://www.behance.net/CamilaNery"> or check out my work on Behance!</a> </p>
 									<img src="https://unsplash.it/400/300/?random" />
-									<p>This will be erased when javascript draws our new content.</p>
-
 								<!-- this is the project icon -->
 
 								<ul class="rig columns-4">
 								<script id="project-cards" type="text/template">
+
 									{{#projects}}
-									<div class="project two columns" id="b{{id}}">
+									<div class="project columns" id="b{{id}}">
 										<li> <a class="wrapping" href="#{{id}}" data-project-id="{{id}}">
 											<img src="{{covers.115}}" alt="{{name}}" />
 										</a> </li>
 									</div>
 									{{/projects}}
+
 								</script>
 							</ul>
 
 							</div>
-
+							</div>
 						</div>
 					</div>
 
@@ -196,7 +199,7 @@
 		<div class="project-page" id="project-{{project.id}}">
 
 			<button class="close">x</button>
-			
+
 
 			<div class="group">
 				<h1>{{project.name}}</h1>
