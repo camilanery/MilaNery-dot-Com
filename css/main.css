@@ -285,7 +285,7 @@ h3{
 
 
 /*******/
-#project-cards img{
+#project-cards img {
   border: 5px solid rgb(151, 163, 230);
 }
 
@@ -348,6 +348,39 @@ h3{
   text-decoration: none;
 }
 
+/*.embed-wrapper {
+  max-width: 480px !important;;
+  border: 1px solid rgb(151, 163, 230);
+  text-align: center;
+  margin: 2%;
+}*/
+
+/*.embed-wrapper {
+    position: relative;
+    border: 1px solid rgb(151, 163, 230);
+    max-width: 460px;
+    min-height: 350px;
+    width: auto;
+}*/
+
+.embed-wrapper {
+    position: relative;
+    border: 1px solid rgb(151, 163, 230);
+    max-width: 500px;
+    /*height: auto;*/
+}
+
+.embed-wrapper iframe,
+.embed-wrapper object,
+.embed-wrapper embed {
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 0;
+
+    width: 100% !important;
+    height: 100% !important;
+}
 
 .project-page img {
   max-width: 100%;
@@ -364,9 +397,9 @@ h3{
 .banner-box {
   display: inline-block;
   width: 90%;
-  max-width: 455px;
-  min-height: 400px;
-  padding: 1%;
+  max-width: 600px;
+  min-height: 500px;
+  /*padding: 1%;*/
   /*border: 1px solid pink;*/
   }
 

@@ -3,7 +3,7 @@ ul.rig {
 	font-size: 0px;
 	margin-left: -2.5%; /* should match li left margin */
 }
-ul.rig li {
+ul.rig li iframe{
 	display: inline-block;
 	padding: 10px;
 	margin: 0 0 2.5% 2.5%;
@@ -17,7 +17,7 @@ ul.rig li {
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 }
-ul.rig li img {
+ul.rig li img iframe{
 	max-width: 100%;
 	height: auto;
 	margin: 0 0 10px;
