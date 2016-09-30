@@ -43,9 +43,12 @@
 						<div class="container">
 							<div id="behance-magix" class="group">
 								<!-- placeholder -->
-									<p>Hi! If you are reading this- my site has reached its limit! I'm using Behance's API to plug in my work and the API limit is 150 requests per hour. Why don't you grab a snack and come back in a few? :~)</p>
-									<p> <a href="https://www.behance.net/CamilaNery"> or check out my work on Behance!</a> </p>
-									<img src="https://unsplash.it/400/300/?random" />
+									<p>Hi! If you are reading this- my site has reached its limit! I'm using Behance to plug in my work and the API limit is 150 requests per hour. Why don't you grab a snack and come back in a few? :~)</p>
+									<p> <a href="https://www.behance.net/CamilaNery"> –Or check out my work on the Behance site!</a> </p>
+									<p>Thank u for visiting </p>
+									<p>°˖✧◝(⁰▿⁰)◜✧˖° </p>
+
+
 								<!-- this is the project icon -->
 
 								<ul class="rig columns-4">
@@ -72,7 +75,7 @@
 						<div class="contact">
 							<h2 class="resize"> Contact </h2> <h5 class="SeeMore resize" style="float:right; padding:none; margin-top:-80px;"> + </h5>
 								<ul class="contacts">
-										<li> <a href="mailto:hi@milanery.com">Email Me</a> </li>
+										<li> <a href="mailto:camilanery93@gmail.com">Email Me</a> </li>
 										<li> <a href="http://twitter.com/home/?status= Hello @Yaris_Fun_Club !!! ">Tweet Me</a> </li>
 										<li> <a href="https://www.instagram.com/yaris_fun_club/"> DM Me </a> </li>
 										<li> <a href="tel:2158202709">Facetime Me</a> </li>
@@ -208,8 +211,18 @@
 				<center>
 					<div id="project-images">
 					<ul class="modules-list list-reset banner-box">
+
 						{{#project.modules}}
 							<li class="content module {{type}}">
+
+							{{#embed}}
+							<div class="embed-wrapper">{{{embed}}}</div>{{/embed}}
+              {{^embed}}
+              <!-- <img id="image" class="{{type}}" src="{{#sizes.max_1200}}{{sizes.max_1200}}{{/sizes.max_1200}}{{^sizes.max_1200}}{{sizes.original}}{{/sizes.max_1200}}
+               " />               -->
+							 {{/embed}}
+
+
 								<img src="
 									{{#sizes.max_1200}}{{sizes.max_1200}}{{/sizes.max_1200}}
 									{{^sizes.max_1200}}{{sizes.original}}{{/sizes.max_1200}}
