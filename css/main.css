@@ -33,7 +33,6 @@ body{
   position: relative;
   z-index: 1;
   top:-8px;
-  /*left:20%;*/
   width: 33%;
   border: 1px solid rgb(151, 163, 230);
   border-radius: 1px;
@@ -122,15 +121,17 @@ p {
   font-family: 'Roboto', sans-serif;
   font-size: 13px;
   font-weight: lighter;
-  line-height: 1.2em;
+  line-height: 1.35em;
   letter-spacing: normal;
 }
 
 .contacts{
   text-decoration: none;
   list-style-type: none;
-  float: left;
-  margin-top: -15px;
+  max-width: 100%;
+
+  /*float: left;*/
+  /*margin-top: -15px;*/
 }
 
 .contacts ul {
@@ -144,8 +145,8 @@ p {
 }
 
 .contacts li a {
-  display: block;
-  padding: 0px 20px 0px 0px;
+  vertical-align: baseline;
+  padding-right: 10px;
   text-decoration: none;
   list-style-type: none;
   color: black;
@@ -160,7 +161,9 @@ p {
   cursor: pointer;
 }
 
-
+.lil-footer{
+  white-space: nowrap;
+}
 /*.overlay {
   height: 100%;
   width: 100%;
@@ -195,10 +198,12 @@ p {
   border-width: 0px 0px 1.5px 0px;
   transition: height 1s;
   overflow-y: hidden;
+  overflow-x: hidden;
+
 }
 
 #box1.clicked {
-  height: 300px;
+  height: 250px;
   overflow-y: scroll;
 }
 
@@ -220,12 +225,16 @@ p {
 }
 
 #box3 {
+  position: relative;
+  z-index: -10;
   width: auto;
   height: 85px;
   border: solid black;
   border-width: 0px 0px 1.5px 0px;
   transition: height 1s;
   overflow-y: hidden;
+  overflow-x: hidden;
+
 }
 
 #box3.clicked {
