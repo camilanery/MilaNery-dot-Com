@@ -45,7 +45,7 @@
 								<!-- placeholder -->
 									<p>Hi! If you are reading this- my site has reached its limit! I'm using Behance to plug in my work and the API limit is 150 requests per hour. Why don't you grab a snack and come back in a few? :~)</p>
 									<p> <a href="https://www.behance.net/CamilaNery"> –Or check out my work on the Behance site!</a> </p>
-									<p>Thank u for visiting </p>
+									<p>Thank u for visiting !!!</p>
 									<p>°˖✧◝(⁰▿⁰)◜✧˖° </p>
 
 
@@ -206,34 +206,33 @@
 
 
 			<div class="group">
+				<div class="project-text">
 				<h1>{{project.name}}</h1>
 				<p>{{project.description}}</p>
-				<center>
-					<div id="project-images">
-					<ul class="modules-list list-reset banner-box">
+				</div>
 
+					<div id="project-images">
+					<ul class="modules-list list-reset">
 						{{#project.modules}}
 							<li class="content module {{type}}">
 
 							{{#embed}}
-							<div class="embed-wrapper">{{{embed}}}</div>{{/embed}}
+							<div id="embed-wrapper"> <div class="embed-vid"> {{{embed}}}</div></div>{{/embed}}
               {{^embed}}
-              <!-- <img id="image" class="{{type}}" src="{{#sizes.max_1200}}{{sizes.max_1200}}{{/sizes.max_1200}}{{^sizes.max_1200}}{{sizes.original}}{{/sizes.max_1200}}
-               " />               -->
-							 {{/embed}}
+							{{/embed}}
 
+							<img src="
+								{{#sizes.max_1200}}{{sizes.max_1200}}{{/sizes.max_1200}}
+								{{^sizes.max_1200}}{{sizes.original}}{{/sizes.max_1200}}" />
 
-								<img src="
-									{{#sizes.max_1200}}{{sizes.max_1200}}{{/sizes.max_1200}}
-									{{^sizes.max_1200}}{{sizes.original}}{{/sizes.max_1200}}
-								 " />
 							</li>
 						{{/project.modules}}
 					</ul>
-				</div>
+					</div>
+
 			</div>
 
-				</center>
+
 
 		</div>
 	</script>
