@@ -327,6 +327,7 @@ p {
 .project-text p{
   color: black;
   font-family: 'Roboto', sans-serif;
+  line-height: 1.35em;
 }
 
 .project-page button.close {
@@ -348,24 +349,6 @@ p {
 }
 
 
-
-
-
-/*.embed-wrapper {
-  max-width: 480px !important;;
-  border: 1px solid rgb(151, 163, 230);
-  text-align: center;
-  margin: 2%;
-}*/
-
-/*.embed-wrapper {
-    position: relative;
-    border: 1px solid rgb(151, 163, 230);
-    max-width: 460px;
-    min-height: 350px;
-    width: auto;
-}*/
-
 #embed-wrapper {
   /*position: inherit;*/
   /*background-color: blue;*/
@@ -377,27 +360,27 @@ p {
 
 .embed-vid{
   vertical-align: middle;
+  margin: 5% 0 5% 0;
 }
 
 #embed-wrapper iframe{
   border: 1px solid rgb(151, 163, 230);
   max-width: 80% !important;
-  height: 50%;
+  /*height: 50%;*/
  vertical-align: middle;
-
 }
 
 #project-images {
   position: inherit;
   height: 100%;      /* equals max image height */
   width: 100%;
-  white-space: nowrap;
   text-align: center;
   vertical-align: middle;
 }
 
 .content {
   vertical-align: middle;
+  margin: 5% 0 5% 0;
 }
 
 .project-page img{
@@ -405,5 +388,4 @@ p {
   vertical-align: middle;
   max-width: 100%;
   border: 1px solid rgb(151, 163, 230);
-  margin: 5% 0 5% 0;
 }
