@@ -1,248 +1,148 @@
 <!DOCTYPE html>
-
-<html>
-	<head>
-		<meta charset="UTF-8" />
-		<title>&#10047; Hire Me &#10047;</title>
-
-		<link rel="stylesheet" type="text/css" href="./css/main.css">
-		<link rel="stylesheet" type="text/css" href="./css/newgrid.css"/>
-		<link rel="stylesheet" type="text/css" href="./css/grid.css" />
-		<!-- <link rel="stylesheet" type="text/css" href="mobile-menu.css" /> -->
-
-		<link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
-
-	</head>
-
-
-	<body>
-
-	<div class="fullPage">
-
-
-			<div class="mainMenu">
-			<div class="myName">
-				<img class="yaris" src="./images/YarisLoading7.gif" alt="Loading...">
-				<a href="http://milanery.com"> MILA <br> NERY </a>
-			</div>
-
-
-			 		<div id="box1" class="drawer">
-						<div class="aboutSection">
-							<h2 class="resize"> About </h2> <h5 class="SeeMore resize" style="float:right; padding:none; margin-top:-80px;"> + </h5>
-								<img class="portrait" src="./images/selfie.jpg" alt="it me">
-								<p style="position:relative; top:-10px;">Hi! My name is Mila Nery and I'm a Brazilian Graphic Designer and 3D Artist now based in Brooklyn. I graduated from the Maryland Institute College of Art (MICA) in the Spring of 2016! <br> 	<a target="_blank" href="./images/MilaNerysResume2017.pdf"> &#10047; Resume &#10047; </a> </p>
-						</div>
-					</div>
-
-
-
-
-					<div id="box2" class="drawer">
-						<div class="workSection">
-							<h2 class="resize"> Work </h2> <h5 class="SeeMore resize" style="float:right; padding:none; margin-top:-80px;"> + </h5>
-
-						<div class="container">
-							<div id="behance-magix" class="group">
-								<!-- placeholder -->
-									<p>Hi! If you are reading this- my site has reached its limit! I'm using Behance to plug in my work and the API limit is 150 requests per hour. Why don't you grab a snack and come back in a few? :~)</p>
-									<p> <a href="https://www.behance.net/CamilaNery"> –Or check out my work on the Behance site!</a> </p>
-									<p>Thank u for visiting !!!</p>
-									<p>°˖✧◝(⁰▿⁰)◜✧˖° </p>
-
-
-								<!-- this is the project icon -->
-
-								<ul class="rig columns-4">
-								<script id="project-cards" type="text/template">
-
-									{{#projects}}
-									<div class="project columns" id="b{{id}}">
-										<li> <a class="wrapping" href="#{{id}}" data-project-id="{{id}}">
-											<img src="{{covers.115}}" alt="{{name}}" />
-										</a> </li>
-									</div>
-									{{/projects}}
-
-								</script>
-							</ul>
-
-							</div>
-							</div>
-						</div>
-					</div>
-
-
-					<div id="box3" class="drawer">
-						<div class="contact">
-							<h2 class="resize"> Contact </h2> <h5 class="SeeMore resize" style="float:right; padding:none; margin-top:-80px;"> + </h5>
-								<ul class="contacts">
-										<li> <a href="mailto:camilanery93@gmail.com">Email Me</a> </li>
-										<li> <a href="http://twitter.com/home/?status= Hello @Yaris_Fun_Club !!! ">Tweet Me</a> </li>
-										<li> <a href="https://www.instagram.com/yaris_fun_club/"> DM Me </a> </li>
-										<li> <a href="tel:2158202709">Facetime Me</a> </li>
-								</ul>
-							</div>
-							<br>
-								<div class="lil-footer">
-							<h6> &copy;Mila Nery 2016 <br>
-							 		 &#10047; Thank You &#10047; </h6>
-								</div>
-						</div>
-					</div>
-
-				</div>
-
-
-<!--
-	<div class="overlay"> </div>
-
-	<div class="note">
-		<h3>UNDER CONSTRUCTION</h3>
-		<h3>check back later !! :~) </h3>
-	</div>
--->
-
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
-		<!-- when clicked, About opens, SeeMore turns + to - and all other menus are closed. When a different menu opens,
-	 				any open menu closes. -->
-
-	<script>
-	$('.resize').on('click', function() {
-		$(this).parent().parent('.drawer').toggleClass('clicked');
-
-		var plusMinus = $(this).parent().find('h5');
-
-		plusMinus.toggleClass('SeeMore');
-		if(plusMinus.hasClass('SeeMore')){
-			plusMinus.text('+');
-		} else {
-			plusMinus.text('—');
-		}
-	});
-	</script>
-
-	<!-- // TESTING -->
-
-
-
-
-	<div id="dynamic-pages">
-		<!-- individual pages will appear to "print" here -->
-	</div>
-
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-
-	<!-- this is mustache, required for the templating to happen -->
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.1.2/mustache.min.js"></script>
-
-	<script src="mobilemenu.js"></script>
-	<script src="behance.js"></script>
-
-	<script>
-		var url = 'https://api.behance.net/v2/users/' + userName + '/projects/?api_key=' + apiKey +'&per_page=25&callback=?';
-		console.log('connected to ' + url + '.');
-
-		var matchingHeights = function() {
-		  var pHeight = 0;
-		  $('.project').each(function() {
-		    var projectID  = $(this).find('a.wrapping').attr('data-project-id');
-		    pHeight = pHeight > $(this).height() ? pHeight : $(this).height();
-		    console.log('Number ' + projectID + ' is ' + pHeight + ' px tall!');
-		  });
-		  $('.project').each(function() {
-		    $(this).height(pHeight);
-		  });
-		}
-
-		$.getJSON(url, function(data) {
-
-			//mustache for projects
-			var template = $('#project-cards').html();
-			var info = Mustache.to_html(template, data);
-			$('#behance-magix').html(info);
-
-			$('.project img').load(function() {
-				matchingHeights();
-			});
-
-			$('.project a').click(function() {
-			 var projectID  = $(this).attr('data-project-id');
-			 var projectUrl = 'https://api.behance.net/v2/projects/' + projectID + '/?api_key=' + apiKey +'&callback=?';
-			 console.log('trying to show ' + projectUrl + '.');
-
-				$.getJSON(projectUrl, function(data) {
-					//mustache for projects
-					var template = $('#project-page').html();
-					var info = Mustache.to_html(template, data);
-					$('#dynamic-pages').html(info);
-
-					$('.project-page button.close').click(function() {
-						$(this).parent().hide();
-					});
-				});
-			});
-		});
-
-	</script>
-
-<!-- Project Page !!! -->
-
-
-<!-- <script id="project-page" type="text/template">
-	<div class="project-page" id="project-{{project.id}}">
-		<div class="container">
-			<img src="{{project.covers.115}}" alt="{{project.name}}" />
-			<h1>{{project.name}}</h1>
-			<p>{{project.description}}</p>
-
-		</div>
-		<button class="close">X</button>
-	</div>
-</script> -->
-
-	<script id="project-page" type="text/template">
-		<div class="project-page" id="project-{{project.id}}">
-
-			<button class="close">x</button>
-
-
-			<div class="group">
-				<div class="project-text">
-				<h1>{{project.name}}</h1>
-				<p>{{project.description}}</p>
-				</div>
-
-					<div id="project-images">
-					<ul class="modules-list list-reset">
-						{{#project.modules}}
-							<li class="content module {{type}}">
-
-							{{#embed}}
-							<div id="embed-wrapper"> <div class="embed-vid">{{{embed}}}</div></div>{{/embed}}
-              {{^embed}}
-							{{/embed}}
-
-							<img src="
-								{{#sizes.max_1200}}{{sizes.max_1200}}{{/sizes.max_1200}}
-								{{^sizes.max_1200}}{{sizes.original}}{{/sizes.max_1200}}" />
-
-							</li>
-						{{/project.modules}}
-					</ul>
-					</div>
-
-			</div>
-
-
-
-		</div>
-	</script>
-
-</div>
-
-	</body>
-
+<html data-wf-page="59bd752e157a460001f83e7b" data-wf-site="59bd752e157a460001f83e7a">
+<head>
+  <meta charset="utf-8">
+  <title>MILA NERY</title>
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="Webflow" name="generator">
+  <link href="css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="css/webflow.css" rel="stylesheet" type="text/css">
+  <link href="css/mila-nery.webflow.css" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js" type="text/javascript"></script>
+  <script type="text/javascript">WebFont.load({  google: {    families: ["Roboto:300,regular,500"]  }});</script>
+  <!-- [if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif] -->
+  <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
+  <link href="https://daks2k3a4ib2z.cloudfront.net/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <link href="https://daks2k3a4ib2z.cloudfront.net/img/webclip.png" rel="apple-touch-icon">
+</head>
+<body>
+  <div class="div-block">
+    <div class="row w-row">
+      <div class="nav w-col w-col-2"><img src="images/YarisLoading7.gif" class="image">
+        <div class="nav_bar">
+          <a href="index.html" class="w-inline-block">
+            <h1 class="dot_com">MILA<br>NERY</h1>
+          </a>
+          <div class="summary">3D &amp; Graphic Design</div>
+          <a data-ix="open-about" class="aboutbutton w-inline-block">
+            <h2 data-ix="new-interaction" class="heading-2">About</h2>
+          </a>
+          <a data-ix="open-works" href="#" class="workbutton w-inline-block">
+            <h2 class="heading-2">Work</h2>
+          </a>
+          <a href="#" data-ix="open-contact" class="contactbutton w-inline-block">
+            <h2 class="heading-2">Contact</h2>
+          </a>
+        </div>
+      </div>
+      <div class="content w-col w-col-10">
+        <div class="about">
+          <div class="about_container"><img src="images/selfie.jpg" srcset="images/selfie-p-500.jpeg 500w, images/selfie-p-800.jpeg 800w, images/selfie.jpg 901w" sizes="(max-width: 767px) 10vw, 8vw" class="selfie">
+            <p class="bio">Mila Nery is a Brazilian Graphic Designer and 3D Artist now based in Brooklyn. She graduated from the Maryland Institute College of Art in the Spring of 2016. Since then, she&#x27;s moved to Brooklyn, started freelancing around, and adopted a pup named Tiva. In her spare time she likes to play video games, sew, and go for long walks.</p>
+          </div><a target="_blank" class="resume_link">✿ My Resume ✿</a>
+          <a href="#" data-ix="close-about" class="close-button w-inline-block">
+            <div class="x">x</div>
+          </a>
+        </div>
+
+        <div class="work">
+          <!-- <div class="collection-list-wrapper w-dyn-list">
+            <div class="collection-list w-dyn-items">
+              <div class="w-dyn-item"><img data-ix="open-project1" class="proj_thumb">
+                <h5 class="proj_title"></h5>
+              </div>
+            </div>
+            <div class="w-dyn-empty">
+              <div>No items found.</div>
+            </div>
+          </div>
+          <div class="collection-list-wrapper-2 w-dyn-list">
+            <div class="collection-list-2 w-dyn-items">
+              <div class="w-dyn-item"><img data-ix="open-proj2" class="proj_thumb">
+                <h5 class="proj_title"></h5>
+              </div>
+            </div>
+            <div class="w-dyn-empty">
+              <div>No items found.</div>
+            </div>
+          </div> -->
+        </div>
+
+        <div class="contact">
+          <a href="#" data-ix="close-contact" class="close-button w-inline-block">
+            <div class="x">x</div>
+          </a>
+          <div class="div-block-2">
+            <div class="contact_links_div"><a href="mailto:camilanery93@gmail.com?subject=Hello!%20" class="contact_links">Email Me</a><a target="_blank" href="https://www.instagram.com/yaris_fun_club/" class="contact_links">DM Me</a><a href="tel:2158202709" class="contact_links">Facetime Me</a><a href="https://twitter.com/intent/tweet?text=%20Hello%20%40Yaris_Fun_Club%20%21%21%21&amp;source=webclient" class="contact_links">Tweet Me</a></div>
+            <p class="paragraph">© Mila Nery 2017<br>✿ Thank You ✿</p>
+          </div>
+        </div>
+        <div class="div-block-3">
+          <h1 class="heading-5">✿</h1>
+        </div>
+
+        <!-- <div class="project_1">
+          <a href="#" data-ix="close-project1" class="close-button w-inline-block">
+            <div class="x">x</div>
+          </a>
+          <div class="proj_1_videos w-dyn-list">
+            <div class="w-dyn-items">
+              <div class="w-dyn-item">
+                <div class="proj_page_videos w-video w-embed"></div>
+                <div class="proj_page_videos w-video w-embed"></div>
+                <div class="proj_page_videos w-video w-embed"></div>
+              </div>
+            </div>
+            <div class="w-dyn-empty">
+              <div>No items found.</div>
+            </div>
+          </div>
+          <div class="proj_1_about w-dyn-list">
+            <div class="w-dyn-items">
+              <div class="w-dyn-item">
+                <h1 class="proj_page_tile"></h1>
+                <div class="proj_page_mediums w-richtext"></div>
+                <div class="proj_page_text w-richtext"></div>
+              </div>
+            </div>
+            <div class="w-dyn-empty">
+              <div>No items found.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project_2">
+          <a href="#" data-ix="close-proj2" class="close-button w-inline-block">
+            <div class="x">x</div>
+          </a>
+          <div class="proj_1_videos w-dyn-list">
+            <div class="w-dyn-items">
+              <div class="w-dyn-item">
+                <div class="proj_page_videos w-video w-embed"></div><img class="proj_page_image"><img class="proj_page_image"></div>
+            </div>
+            <div class="w-dyn-empty">
+              <div>No items found.</div>
+            </div>
+          </div>
+          <div class="proj_1_about w-dyn-list">
+            <div class="w-dyn-items">
+              <div class="w-dyn-item">
+                <h1 class="proj_page_tile"></h1>
+                <div class="proj_page_mediums w-richtext"></div>
+                <div class="proj_page_text w-richtext"></div>
+              </div>
+            </div>
+            <div class="w-dyn-empty">
+              <div>No items found.</div>
+            </div>
+          </div>
+        </div>
+         -->
+      </div>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
+  <script src="js/webflow.js" type="text/javascript"></script>
+  <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+</body>
 </html>
